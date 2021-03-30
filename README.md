@@ -10,7 +10,8 @@
 git clone {このリポジトリ}
 ```
 
-以下（管理者権限必須） ビルド！（docker-compose .yml があるところで）
+以下（管理者権限必須）  
+ビルド！（docker-compose .yml があるところで）
 
 ```bash
 sudo docker-compose build
@@ -46,7 +47,7 @@ curl -s https://getcomposer.org/installer | php
 php composer.phar create-project --prefer-dist cakephp/app:4.* cms
 ```
 
-* cmc のところを変えるとプロジェクトのディレクトリが変更可能
+* `cms` のところを変えるとプロジェクトのディレクトリが変更可能
 
 ホストの切り替え
 
