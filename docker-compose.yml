@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  cake_php:
+    build: ./
+    ports:
+      - 80:80
+    volumes:
+      - ./app/:/var/www/html/
+      - ./php.ini:/usr/local/etc/php/php.ini
+    environment:
+      TZ: "Asia/Tokyo"
+    container_name: 'cake_php'
+  mysql:
+    image: mysql:5.6
+    tty: true # コンテナの起動永続化
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cake_db
+      MYSQL_USER: cake
+      MYSQL_PASSWORD: cake
+      TZ: "Asia/Tokyo"
+    container_name: 'cake_mysql_server'
