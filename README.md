@@ -64,7 +64,7 @@ http://cms.cake.com/
 
 ## DB 接続方法
 
-docker-compose で mysql サーバーも建っているるかと思うので app/cake/cms/config/app_local.php 上のDB 接続情報を上書き
+docker-compose で mysql サーバーも建っているかと思うので `app/cake/cms/config/app_local.php` 上のDB 接続情報を上書き
 
 ```
     'username' => 'cake',
